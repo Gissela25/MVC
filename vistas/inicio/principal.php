@@ -1,7 +1,6 @@
 <?php
 
-echo"Hey dude";
+echo"HEyyy";
+echo "<br>";
 
 var_dump($bd);
-
-?>
