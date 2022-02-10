@@ -15,7 +15,7 @@ class BasedeDatos{
             self::clave);
 
             $conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-            //return $conexion;
+            return $conexion;
         }catch(PDOException $e){
             return "FALLO".$e->getMessage();
 
