@@ -72,7 +72,25 @@ class Producto{
         }
     }
 
+    public function Cantidad2(){
+        try{
+            $consulta=$this->pdo->prepare("SELECT SUM(Cantidad) as Cantidad FROM laptops;");
+            $consulta->execute();
+            return $consulta->fetch(PDO::FETCH_OBJ);
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
     
+    public function Cantidad3(){
+        try{
+            $consulta=$this->pdo->prepare("SELECT SUM(Cantidad) as Cantidad FROM pc;");
+            $consulta->execute();
+            return $consulta->fetch(PDO::FETCH_OBJ);
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
     public function Listar(){
         try{
             $consulta=$this->pdo->prepare("SELECT * FROM redes;");
@@ -82,7 +100,24 @@ class Producto{
             die($e->getMessage());
         }
     }
-
+    public function Listar2(){
+        try{
+            $consulta=$this->pdo->prepare("SELECT * FROM laptops;");
+            $consulta->execute();
+            return $consulta->fetchAll(PDO::FETCH_OBJ);
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+    public function Listar3(){
+        try{
+            $consulta=$this->pdo->prepare("SELECT * FROM pc;");
+            $consulta->execute();
+            return $consulta->fetchAll(PDO::FETCH_OBJ);
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
     public function Insertar(Producto $p){
         try{
           $consulta="INSERT INTO redes(Nombre,Marca,Precio,Cantidad) VALUES (?,?,?,?);";
@@ -97,7 +132,34 @@ class Producto{
             die($e->getMessage());
         }
     }
-
+    public function Insertar2(Producto $p){
+        try{
+          $consulta="INSERT INTO laptops(Nombre,Marca,Precio,Cantidad) VALUES (?,?,?,?);";
+          $this->pdo->prepare($consulta)
+                ->execute(array(
+                    $p->getPro_nom(),
+                    $p->getPro_marca(),
+                    $p->getPro_pre(),
+                    $p->getPro_can()
+                ));
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+    public function Insertar3(Producto $p){
+        try{
+          $consulta="INSERT INTO pc(Nombre,Marca,Precio,Cantidad) VALUES (?,?,?,?);";
+          $this->pdo->prepare($consulta)
+                ->execute(array(
+                    $p->getPro_nom(),
+                    $p->getPro_marca(),
+                    $p->getPro_pre(),
+                    $p->getPro_can()
+                ));
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
     public function Obtener(){
         try{
             $consulta=$this->pdo->prepare("SELECT * FROM redes WHERE ID=?;");
@@ -119,6 +181,24 @@ class Producto{
     public function Eliminar($id){
         try{
             $consulta="DELETE FROM redes WHERE ID=?;";
+            $this->pdo->prepare($consulta)
+                 ->execute(array($id));
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+    public function Eliminar2($id){
+        try{
+            $consulta="DELETE FROM laptops WHERE ID=?;";
+            $this->pdo->prepare($consulta)
+                 ->execute(array($id));
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+    public function Eliminar3($id){
+        try{
+            $consulta="DELETE FROM pc WHERE ID=?;";
             $this->pdo->prepare($consulta)
                  ->execute(array($id));
         }catch(Exception $e){
