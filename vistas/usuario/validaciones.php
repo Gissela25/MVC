@@ -23,5 +23,4 @@
     {
         return ($variable1==$variable2)?true:false;
     }
-
 ?>

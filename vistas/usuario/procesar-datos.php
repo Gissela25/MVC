@@ -49,13 +49,21 @@
         {
             array_push($errores,"La contraseña es inválida. (Al menos 8 carácteres)");
         }
-        if(!isEqual(isset($passd),isset($passdc)))
+        if(!isEqual(isAlphanumeric($passd),isAlphanumeric($passdc)))
         {
             array_push($errores,"Las contraseñas no coinciden.");
         }
-        if(isEqual(isset($passd),isset($passdc))&&isUser($user)&&isText($name)&&isText($lname)&&isMail($email))
+        if(isEqual(isAlphanumeric($passd),isAlphanumeric($passdc))&&isUser($user)&&isText($name)&&isText($lname)&&isMail($email))
         {
-            echo "<div class='alert alert-success'>Por favor verifica que eres tú. Haz clic en el enlace que te enviamos al correo</div>";
+           // echo "<div class='alert alert-success'>Por favor verifica que eres tú. Haz clic en el enlace que te enviamos al correo</div>";
+           $modelo = new Usuario();
+           $modelo->setUser_user($user);
+           $modelo->setName_name($name);
+           $modelo->setLname_lname($lname);
+           $modelo->setEmail_email($email);
+           $modelo->setPass_passd($passd);
+           $modelo->Save();     
+          
         }
 
     }

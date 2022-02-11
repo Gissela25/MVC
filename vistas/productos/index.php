@@ -27,7 +27,7 @@
                     <td><?=$r->ID?></td>
                     <td><?=$r->Nombre?></td>
                     <td><?=$r->Marca?></td>
-                    <td><?=$r->Precio?></td>
+                    <td>$<?=$r->Precio?></td>
                     <td><?=$r->Cantidad?></td>
                     <td>
                         <a class="btn btn-info btn-flat" href="?c=producto&a=FormCrear&id=<?=$r->ID?>">Editar

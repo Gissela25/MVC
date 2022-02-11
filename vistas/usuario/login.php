@@ -15,24 +15,37 @@
     <div class="container">
         <div class="row justify-content-center pt-5 mt-5 mr-1">
             <div class="col-md-4 formulario">
-                <form action="">
+                <form action="http://localhost/mvc/?c=usuario&a=Ingresar" method="POST" role="form"> 
                     <div class="form-group text-center">
                         <h1 class="text-light">Iniciar Sesión</h1>
                     </div>
+                    <?php require 'procesar-datos-in.php'?>
+                    <?php
+                    if(count($errores_in)>0&&isset($_POST['ingresar']))
+                    {
+                        echo "<ul>";
+                        foreach($errores_in as $error)
+                        {
+                          echo "<li>$error</li>";
+                        }
+                        echo "</ul>";
+
+                    }
+                    ?>
                     <div class="form-group mx-sm-4 pt-3">
-                        <input type="text" class="form-control" placeholder="Ingrese su Usuario" name="" id="">
+                        <input type="text" class="form-control"  placeholder="Ingrese su Usuario" name="i_user" id="i_user">
                     </div>
                     <div class="form-group mx-sm-4 pb-3">
-                        <input type="text" class="form-control" placeholder="Ingrese su Contraseña" name="" id="">
+                        <input type="password" class="form-control"  placeholder="Ingrese su Contraseña" name="i_pass" id="i_pass">
                     </div>
                     <div class="form-group mx-sm-4 pb-2">
-                        <input type="submit" value="Ingresar" class="btn btn-block ingresar">
+                        <input type="submit" value="Ingresar" name="ingresar" id="ingresar" class="btn btn-block ingresar">
                     </div>
                     <div class="form-group mx-sm-4 text-right">
                         <span class=""><a href="#" class="olvide">Olvide mi contraseña?</a></span>
                     </div>
                     <div class="form-group text-center">
-                        <span class=""><a href="registro.php" class="olvide1">Registrarse</a></span>
+                        <span class=""><a href="http://localhost/mvc/?c=usuario&a=Guardar" class="olvide1">Registrarse</a></span>
                     </div>
                 </form>
             </div>
