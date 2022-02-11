@@ -12,7 +12,6 @@ class ProductoControlador{
 
     public function Inicio(){
         require_once "vistas/encabezado.php";
-        require_once "vistas/pie.php";
         require_once "vistas/productos/index.php";
         require_once "vistas/productos2/index.php";
         require_once "vistas/productos3/index.php";
@@ -28,7 +27,6 @@ class ProductoControlador{
 
         require_once "vistas/encabezado.php";
         require_once "vistas/productos/form.php";
-        require_once "vistas/pie.php";
     }
     public function FormCrear2(){
         $titulo="Registrar";
@@ -40,7 +38,6 @@ class ProductoControlador{
 
         require_once "vistas/encabezado.php";
         require_once "vistas/productos2/form.php";
-        require_once "vistas/pie.php";
     }
     public function FormCrear3(){
         $titulo="Registrar";
@@ -52,7 +49,6 @@ class ProductoControlador{
 
         require_once "vistas/encabezado.php";
         require_once "vistas/productos3/form.php";
-        require_once "vistas/pie.php";
     }
     public function Guardar(){
         $p=new Producto();
