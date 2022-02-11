@@ -13,8 +13,7 @@
         private $passd;
         private $hash;
         private $activo;
-        private $i_user;
-        private $i_pass;
+
         public function __CONSTRUCT(){
             $this->pdo = BasedeDatos::Conectar();
         }
@@ -88,22 +87,7 @@
         public function setEstado_activo(int $estado){
             $this->activo=$estado;
         }
-        public function getPass(): ?string{
-            return $this-> i_pass;
-    
-        }
-    
-        public function setPass(string $ipass){
-            $this->i_pass=$ipass;
-        }
-        public function getUser(): ?string{
-            return $this->i_user;
-    
-        }
-    
-        public function setUser(string $iuser){
-            $this->i_user=$iuser;
-        }
+        
         
         public function Save(){
             try{
@@ -126,24 +110,6 @@
             }
         }
        
-        public function Into(){
-            try{
-                $consulta=$this->pdo->prepare("SELECT COUNT(*) FROM usuarios WHERE Usuario='{$this->getUser()}' AND Contraseña='{{$this->getPass()}';");
-                $consulta->execute(array($this->getUser(),$this->getPass()));
-                $filas= $consulta ->fetchColumn();
-                
-                if($filas==0)
-                {
-                    echo "<ul> <li>No existe ningún usuario con esas credenciales</li></ul>";
-                   
-                }
-                else{
-                   
-                }
-
-            }catch(Exception $e){
-                die($e->getMessage());
-            }
-        }
+        
         
     }

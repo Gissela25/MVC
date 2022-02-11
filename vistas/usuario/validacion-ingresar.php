@@ -11,4 +11,8 @@
     {
         return preg_match('/^[a-zA-Z0-9()._,*%&#@]{8,}$/',$variable);
     }
+    function esMail($variable)
+    {
+        return filter_var($variable,FILTER_VALIDATE_EMAIL);
+    }
 ?>

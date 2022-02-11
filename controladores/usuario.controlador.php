@@ -1,6 +1,7 @@
 <?php
 
 require_once "modelos/usuario.php";
+require_once "modelos/entrada.php";
     class UsuarioControlador{
         private $modelo;
 
@@ -16,6 +17,11 @@ require_once "modelos/usuario.php";
         public function Ingresar()
         {
             require"vistas/usuario/login.php";
+            
+        }
+        public function Recuperar()
+        {
+            require"vistas/usuario/recuperar.php";
             
         }
 
