@@ -55,7 +55,15 @@
         }
         if(isEqual(isset($passd),isset($passdc))&&isUser($user)&&isText($name)&&isText($lname)&&isMail($email))
         {
-            echo "<div class='alert alert-success'>Por favor verifica que eres tú. Haz clic en el enlace que te enviamos al correo</div>";
+           // echo "<div class='alert alert-success'>Por favor verifica que eres tú. Haz clic en el enlace que te enviamos al correo</div>";
+           $modelo = new Usuario();
+           $modelo->setUser_user($user);
+           $modelo->setName_name($name);
+           $modelo->setLname_lname($lname);
+           $modelo->setEmail_email($email);
+           $modelo->setPass_passd($passd);
+           $modelo->Save();     
+          
         }
 
     }

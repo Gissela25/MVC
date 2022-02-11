@@ -11,10 +11,10 @@
 <body>
     
     <div class="container">
-        <div class="row justify-content-center  mt-5 mr-1">
+        <div class="row justify-content-center  mt-4 mr-1">
             <div class="col-md-5 card">
                 <div class="card-body">
-                    <form action="" method="POST" role="form" >
+                    <form action="http://localhost/mvc/?c=usuario&a=Guardar" method="POST" role="form" >
                     <div class="form-group text-center">
                         <h1 class="text-black">Registro</h1>
                     </div>
@@ -50,7 +50,7 @@
                         <input type="password" class="form-control" placeholder="Confirmar Contraseña" name="passdc" id="passdc">
                     </div>
                     <div class="form-group mx-sm-4 text-right">      
-                       <span class=""><a href="login.php" class="olvide">Ya tengo una cuenta</a></span>
+                       <span class=""><a href="http://localhost/mvc/?c=usuario&a=Ingresar" class="olvide">Ya tengo una cuenta</a></span>
                     </div>
                     <div class="form-group mx-sm-4  ">
                        <center>
