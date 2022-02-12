@@ -9,8 +9,11 @@ class ProductoControlador{
     public function __CONSTRUCT(){
         $this->modelo=new Producto;
     }
+    public function Indice(){
+        require_once "vistas/inicio/principal.php";
+    }
 
-    public function Inicio(){
+    public function Ver(){
         require_once "vistas/encabezado.php";
         require_once "vistas/productos/index.php";
         require_once "vistas/productos2/index.php";

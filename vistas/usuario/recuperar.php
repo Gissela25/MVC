@@ -39,7 +39,7 @@
                         <input type="submit" value="Confirmar" name="confirmar" id="confirmar" class="btn btn-block ingresar">
                     </div>
                     <div class="form-group text-center">
-                        <span class=""><a href="http://localhost/MVC/" class="olvide1">Regresar</a></span>
+                        <span class=""><a href="http://localhost/mvc/?c=usuario&a=Ingresar" class="olvide1">Regresar</a></span>
                     </div>
                 </form>
             </div>

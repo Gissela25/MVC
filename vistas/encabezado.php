@@ -22,13 +22,14 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="http://localhost/mvc/?c=usuario&a=Ingresar">Incio</a>
+                        <a class="nav-link active" aria-current="page" href="http://localhost/mvc/?c=producto&a=Indice">Incio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="?c=producto">Productos</a>
+                        <a class="nav-link" href="http://localhost/mvc/?c=producto&a=Ver">Productos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="http://localhost/MVC/inicio">Salir</a>

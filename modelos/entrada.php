@@ -41,7 +41,7 @@
                 
                 if($filas>0)
                 {
-                   header("Location: http://localhost/mvc/?u=".$i_user);
+                   header("Location: http://localhost/mvc/?c=producto&a=Indice");
                 }
                 else{
                     echo "<ul> <li>No existe ningún usuario con esas credenciales</li></ul>";
@@ -76,7 +76,7 @@
                    
                 }
                 else{
-                    echo "<ul> <li>No existe ningún usuario con esas credenciales</li></ul>";
+                    echo "<ul> <li>No existe ningún usuario relacionado con ese correo</li></ul>";
                 }
 
             }catch(Exception $e){

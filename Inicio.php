@@ -29,10 +29,10 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="vistas/usuario/login.php">Inciar Sesion</a>
+                                <a class="nav-link active" aria-current="page" href="http://localhost/mvc/?c=usuario&a=Ingresar">Inciar Sesion</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="vistas/usuario/registro">Registrarse</a>
+                                <a class="nav-link"  href="http://localhost/mvc/?c=usuario&a=Guardar">Registrarse</a>
                             </li>
                         </ul>
                     </div>
