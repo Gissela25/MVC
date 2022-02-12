@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
-</head>
+        <link rel="stylesheet" href="assets/css/encabezado.css">
 
 <body>
     <nav class="navbar navbar-expand-lg navbar navbar-dark" style="background-color: #000000;">
@@ -25,13 +25,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.php">Incio</a>
+                        <a class="nav-link active" aria-current="page" href="http://localhost/mvc/?c=usuario&a=Ingresar">Incio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="?c=producto">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.php">Salir</a>
+                        <a class="nav-link" href="http://localhost/MVC/inicio">Salir</a>
                     </li>
                 </ul>
             </div>

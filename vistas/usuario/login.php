@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <title>Login</title>
-    <link rel="stylesheet" href="vistas/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -45,7 +45,7 @@
                         <span class=""><a href="http://localhost/mvc/?c=usuario&a=Recuperar" class="olvide">Olvide mi contraseña?</a></span>
                     </div>
                     <div class="form-group text-center">
-                        <span class=""><a href="http://localhost/mvc/?c=usuario&a=Guardar" class="olvide1">Registrarse</a></span>
+                        <span class=""><a href="http://localhost/MVC/vistas/usuario/registro" class="olvide1">Registrarse</a></span>
                     </div>
                 </form>
             </div>

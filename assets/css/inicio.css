@@ -1,0 +1,22 @@
+body{
+    background-image: url(../images/index5.webp); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+/* .menu-bar{
+    background-image: linear-gradient(-90deg,#00caff,#096479,#000000);
+}
+.nav-link{
+    font-size: 12px;
+    margin: 3px;
+    color: #fff!important;
+    font-weight: 500;
+}
+.navbar-brand{
+    font-size: 20px;
+    margin: 3px;
+    color: #fff!important;
+    font-weight: 500;
+} */ 

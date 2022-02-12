@@ -2,7 +2,7 @@
     <div class="col-md-3 formulario">
         <form class="form-horizontal" method="POST" action="?c=producto&a=Guardar">
             <fieldset>
-                <legend>Ingresando Articulos Redes</legend>
+                <legend style="color:#FFFFFF"  class="text-center">Ingresando Articulos Redes</legend>
                 <div class="form-group">
                     <div class="col-lg-10">
                         <input class="form-control" name="ID" type="hidden" value="<?=$p->getPro_id()?>">
