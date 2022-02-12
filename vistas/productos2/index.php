@@ -3,7 +3,7 @@
         <div class="container-xxl"></div>
         <h3 class="text-center" style="color:#FFFFFF">Accesorios de Laptops</h3>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <a class="btn btn-primary btn-flat" href="?c=producto&a=FormCrear2">Insertar
+          <a class="btn btn-success btn-flat" href="?c=producto&a=FormCrear2">Insertar
             <i class="fa fa-lg fa-plus"></i></a>
         </div>
     </div>
