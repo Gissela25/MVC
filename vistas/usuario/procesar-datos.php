@@ -10,21 +10,21 @@
         }
         elseif(!isUser($user))
         {
-            array_push($errores,"Debes ingresar un usuario válido (No se admiten carácteres especiales)");
+            array_push($errores,"Debes ingresar un usuario válido.");
         }
         if(!isset($name)||isVoid($name))
         {
             array_push($errores,"Debe ingresar un nombre.");
         }elseif(!isText($name))
         {
-            array_push($errores,"El nombre debe contener sólo letras.");
+            array_push($errores,"El nombre debe contener sólo letras y ser válido.");
         }
         if(!isset($lname)||isVoid($lname))
         {
             array_push($errores,"Debe ingresar un apellido.");
         }elseif(!isText($lname))
         {
-            array_push($errores,"El apellido debe contener sólo letras.");
+            array_push($errores,"El apellido debe contener sólo letras y ser válido.");
         }
         if(!isset($email)||isVoid($email))
         {

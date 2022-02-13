@@ -5,7 +5,7 @@
     }
     function esUser($variable)
     {
-        return preg_match('/^[a-zA-Z0-9-.]{4,20}$/',$variable);
+        return preg_match('/^([a-zA-Z0-9-.]{2,20})[ ]?([a-zA-Z0-9-.]{2,20})?$/',$variable);
     }
     function esAlphanumeric($variable)
     {
