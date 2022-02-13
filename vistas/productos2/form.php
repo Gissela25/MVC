@@ -1,8 +1,8 @@
-<div class="row justify-content-center mt-5 mr-2">
-    <div class="col-md-3 formulario">
+<div class="d-flex justify-content-center">
+    <div class="col-md-4 formulario my-3">
         <form class="form-horizontal" method="POST" action="<?php echo SERVERURL;?>producto/Guardar2">
             <fieldset>
-                <legend style="color:#FFFFFF"  class="text-center"><?=$titulo?> Articulos Laptops</legend>
+                <legend style="color:#FFFFFF"  class="text-center"><?=$titulo?> Artículos Laptops</legend>
                 <div class="form-group">
                     <div class="col-lg-10">
                         <input class="form-control" name="ID" type="hidden" value="<?=$p->getPro_id()?>">
@@ -28,8 +28,8 @@
                     </div>
                 </div>
                 <div class="mt-5 mx-5 pb-2">
-                    <button class="btn btn-danger" type="reset">Cancel</button>
-                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <button class="btn btn-danger" type="reset">Cancelar</button>
+                    <button class="btn btn-success" type="submit">Enviar</button>
                 </div>
             </fieldset>
         </form>
