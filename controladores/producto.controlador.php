@@ -23,30 +23,28 @@ class ProductoControlador{
     public function FormCrear(){
         $titulo="Registrar";
         $p=new Producto();
-        if(isset($_GET['ID'])){
-            $p=$this->modelo->Obtener($_GET['ID']);
+        if(isset($_GET['id'])){
+            $p=$this->modelo->Obtener($_GET['id']);
             $titulo="Modificar";
         }
-
         require_once "vistas/encabezado.php";
         require_once "vistas/productos/form.php";
     }
     public function FormCrear2(){
         $titulo="Registrar";
         $p=new Producto();
-        if(isset($_GET['ID'])){
-            $p=$this->modelo->Obtener($_GET['ID']);
+        if(isset($_GET['id'])){
+            $p=$this->modelo->Obtener2($_GET['id']);
             $titulo="Modificar";
         }
-
         require_once "vistas/encabezado.php";
         require_once "vistas/productos2/form.php";
     }
     public function FormCrear3(){
         $titulo="Registrar";
         $p=new Producto();
-        if(isset($_GET['ID'])){
-            $p=$this->modelo->Obtener($_GET['ID']);
+        if(isset($_GET['id'])){
+            $p=$this->modelo->Obtener3($_GET['id']);
             $titulo="Modificar";
         }
 
@@ -61,6 +59,8 @@ class ProductoControlador{
         $p->setPro_pre($_POST['Precio']);
         $p->setPro_can($_POST['Cantidad']);
 
+        $p->getPro_id() > 0 ?
+        $this->modelo->Actualizar($p) :
         $this->modelo->Insertar($p);
 
         header("location:?c=producto");
@@ -74,6 +74,8 @@ class ProductoControlador{
         $p->setPro_pre($_POST['Precio']);
         $p->setPro_can($_POST['Cantidad']);
 
+        $p->getPro_id() > 0 ?
+        $this->modelo->Actualizar2($p) :
         $this->modelo->Insertar2($p);
 
         header("location:?c=producto");
@@ -88,6 +90,8 @@ class ProductoControlador{
         $p->setPro_pre($_POST['Precio']);
         $p->setPro_can($_POST['Cantidad']);
 
+        $p->getPro_id() > 0 ?
+        $this->modelo->Actualizar3($p) :
         $this->modelo->Insertar3($p);
 
         header("location:?c=producto");
@@ -105,5 +109,12 @@ class ProductoControlador{
     public function Borrar3(){
         $this->modelo->Eliminar3($_GET['id']);
         header("location:?c=producto");
+    }
+    public function Inicio(){
+        //$bd = BasedeDatos::Conectar();
+        require_once "vistas/encabezado.php";
+        require_once "vistas/productos/index.php";
+        require_once "vistas/productos2/index.php";
+        require_once "vistas/productos3/index.php";
     }
 }
