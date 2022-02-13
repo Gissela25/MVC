@@ -8,6 +8,19 @@
                         <input class="form-control" name="ID" type="hidden" value="<?=$p->getPro_id()?>">
                     </div>
                 </div>
+                <?php require 'procesar-product.php'?>
+                    <?php
+                    if(count($errores)>0&&isset($_POST['enviar']))
+                    {
+                        echo "<div> <ul>";
+                        foreach($errores as $error)
+                        {
+                          echo "<li>$error</li>";
+                        }
+                        echo "</ul></div>";
+
+                    }
+                    ?>
                 <div class="form-group">
                     <label style="color:#FFFFFF" class="col-lg-2 control-label mt-2" for="Nombre">Nombre</label>
                     <div class="col-lg-10">
@@ -28,7 +41,7 @@
                 </div>
                 <div class="mt-5 mx-5 pb-2">
                     <button class="btn btn-danger" type="reset">Cancelar</button>
-                    <button class="btn btn-success" type="submit">Enviar</button>
+                    <button class="btn btn-success" type="submit" name ="enviar">Enviar</button>
                 </div>
             </fieldset>
         </form>
