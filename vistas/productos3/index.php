@@ -30,7 +30,7 @@
                     <td>$<?=$r->Precio?></td>
                     <td><?=$r->Cantidad?></td>
                     <td>
-                        <a class="btn btn-light btn-flat" href="?c=producto&a=FormCrear&id=<?=$r->ID?>">Editar
+                        <a class="btn btn-light btn-flat" href="?c=producto&a=FormCrear3&id=<?=$r->ID?>">Editar
                             <i class="fa fa-lg fa-refresh"></i></a>
                         <a class="btn btn-secondary btn-flat" href="?c=producto&a=Borrar3&id=<?=$r->ID?>">Eliminar
                             <i class="fa fa-lg fa-trash"></i></a>
