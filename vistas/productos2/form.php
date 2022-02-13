@@ -11,20 +11,20 @@
                 <div class="form-group">
                     <label class="col-lg-2 control-label mt-2" for="Nombre">Nombre</label>
                     <div class="col-lg-10">
-                        <input required class="form-control" name="Nombre" type="text" placeholder="Nombre Producto"
+                        <input pattern="^([a-zA-Záéíóúñ]{3,65})[ ]?([a-zA-Záéíóúñ]{3,65})?$" required class="form-control" name="Nombre" type="text" placeholder="Nombre Producto"
                             value="<?=$p->getPro_nom()?>">
                     </div>
                     <label class="col-lg-2 control-label mt-2" for="Marca">Marca</label>
                     <div class="col-lg-10">
-                        <input required class="form-control" name="Marca" type="text" placeholder="Marca" value="<?=$p->getPro_marca()?>">
+                        <input pattern="^([a-zA-Záéíóúñ]{3,65})[ ]?([a-zA-Záéíóúñ]{3,65})?$" required class="form-control" name="Marca" type="text" placeholder="Marca" value="<?=$p->getPro_marca()?>">
                     </div>
                     <label class="col-lg-2 control-label mt-2" for="Precio">Precio</label>
                     <div class="col-lg-10">
-                        <input required class="form-control" name="Precio" type="text" placeholder="Precio" value="<?=$p->getPro_pre()?>">
+                        <input pattern="^([0-9]+).?([0-9]+)?$" required class="form-control" name="Precio" type="text" placeholder="Precio" value="<?=$p->getPro_pre()?>">
                     </div>
                     <label class="col-lg-2 control-label mt-2" for="Cantidad">Cantidad</label>
                     <div class="col-lg-10 " >
-                        <input required class="form-control" name="Cantidad" type="text" placeholder="Cantidad" value="<?=$p->getPro_can()?>">
+                        <input pattern="^[0-9]$" required class="form-control" name="Cantidad" type="text" placeholder="Cantidad" value="<?=$p->getPro_can()?>">
                     </div>
                 </div>
                 <div class="mt-5 mx-5 pb-2">
