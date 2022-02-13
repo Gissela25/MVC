@@ -19,8 +19,4 @@
     {
         return preg_match('/^[a-zA-Z0-9-.]{4,20}$/',$variable);
     }
-    function isEqual($variable1,$variable2)
-    {
-        return ($variable1==$variable2)?true:false;
-    }
 ?>

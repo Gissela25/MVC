@@ -1,6 +1,6 @@
 <div class="row justify-content-center mt-5 mr-2">
     <div class="col-md-3 formulario">
-        <form class="form-horizontal" method="POST" action="?c=producto&a=Guardar">
+        <form class="form-horizontal" method="POST" action="<?php echo SERVERURL;?>producto/Guardar">
             <fieldset>
                 <legend style="color:#FFFFFF"  class="text-center"><?=$titulo?> Articulos Redes</legend>
                 <div class="form-group">

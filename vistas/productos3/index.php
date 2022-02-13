@@ -3,7 +3,7 @@
         <div class="container-xxl"></div>
         <h3 class="text-center" style="color:#FFFFFF">Accesorios de PC</h3>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <a class="btn btn-success btn-flat" href="?c=producto&a=FormCrear3">Insertar
+          <a class="btn btn-success btn-flat" href="FormCrear3">Insertar
             <i class="fa fa-lg fa-plus"></i></a>
         </div>
     </div>
@@ -30,9 +30,9 @@
                     <td>$<?=$r->Precio?></td>
                     <td><?=$r->Cantidad?></td>
                     <td>
-                        <a class="btn btn-light btn-flat" href="?c=producto&a=FormCrear3&id=<?=$r->ID?>">Editar
+                        <a class="btn btn-light btn-flat" href="FormCrear3/<?=$r->ID?>">Editar
                             <i class="fa fa-lg fa-refresh"></i></a>
-                        <a class="btn btn-secondary btn-flat" href="?c=producto&a=Borrar3&id=<?=$r->ID?>">Eliminar
+                        <a class="btn btn-secondary btn-flat" href="Borrar3/<?=$r->ID?>">Eliminar
                             <i class="fa fa-lg fa-trash"></i></a>
                     </td>
                     </td>

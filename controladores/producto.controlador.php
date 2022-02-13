@@ -1,7 +1,7 @@
 <?php
 
 require_once "modelos/producto.php";
-
+require_once "config.php";
 class ProductoControlador{
 
     private $modelo;
@@ -63,7 +63,7 @@ class ProductoControlador{
         $this->modelo->Actualizar($p) :
         $this->modelo->Insertar($p);
 
-        header("location:?c=producto");
+        header("location: ".SERVERURL."producto/Ver");
 
     }
     public function Guardar2(){
@@ -78,7 +78,7 @@ class ProductoControlador{
         $this->modelo->Actualizar2($p) :
         $this->modelo->Insertar2($p);
 
-        header("location:?c=producto");
+        header("location: ".SERVERURL."producto/Ver");
 
     }
 
@@ -94,21 +94,21 @@ class ProductoControlador{
         $this->modelo->Actualizar3($p) :
         $this->modelo->Insertar3($p);
 
-        header("location:?c=producto");
+        header("location: ".SERVERURL."producto/Ver");
 
     }
 
     public function Borrar(){
         $this->modelo->Eliminar($_GET['id']);
-        header("location:?c=producto");
+        header("location: ".SERVERURL."producto/Ver");
     }
     public function Borrar2(){
         $this->modelo->Eliminar2($_GET['id']);
-        header("location:?c=producto");
+        header("location: ".SERVERURL."producto/Ver");
     }
     public function Borrar3(){
         $this->modelo->Eliminar3($_GET['id']);
-        header("location:?c=producto");
+        header("location: ".SERVERURL."producto/Ver");
     }
     public function Inicio(){
         //$bd = BasedeDatos::Conectar();

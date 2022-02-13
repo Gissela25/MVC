@@ -1,8 +1,8 @@
 <div class="row justify-content-center mt-5 mr-2">
     <div class="col-md-3 formulario">
-        <form class="form-horizontal" method="POST" action="?c=producto&a=Guardar3">
+        <form class="form-horizontal" method="POST" action="<?php echo SERVERURL;?>producto/Guardar3">
             <fieldset>
-                <legend style="color:#FFFFFF"  class="text-center"><?=$titulo?> Articulos Laptops</legend>
+                <legend style="color:#FFFFFF"  class="text-center"><?=$titulo?> Articulos PCs</legend>
                 <div class="form-group">
                     <div class="col-lg-10">
                         <input class="form-control" name="ID" type="hidden" value="<?=$p->getPro_id()?>">

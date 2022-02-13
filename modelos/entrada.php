@@ -1,5 +1,5 @@
 <?php
- 
+  require_once "config.php";
     class Entrada{
         private $i_user;
         private $i_pass;
@@ -41,7 +41,7 @@
                 
                 if($filas>0)
                 {
-                   header("Location: http://localhost/mvc/?c=producto&a=Indice");
+                   header("Location: ".SERVERURL."producto/Indice");
                 }
                 else{
                     echo "<ul> <li>No existe ningún usuario con esas credenciales</li></ul>";
