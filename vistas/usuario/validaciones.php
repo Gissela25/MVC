@@ -9,7 +9,7 @@
     }
     function isText($variable)
     {
-        return preg_match('/^[a-zA-Záéíóúñ ]{3,65}$/',$variable);
+        return preg_match('/^([a-zA-Záéíóúñ]{3,65})[ ]?([a-zA-Záéíóúñ]{3,65})?$/',$variable);
     }
     function isMail($variable)
     {
@@ -17,10 +17,6 @@
     }
     function isUser($variable)
     {
-        return preg_match('/^[a-zA-Z0-9-.]{4,20}$/',$variable);
-    }
-    function isEqual($variable1,$variable2)
-    {
-        return ($variable1==$variable2)?true:false;
+        return preg_match('/^([a-zA-Z0-9-.]{2,20})[ ]?([a-zA-Z0-9-.]{2,20})?$/',$variable);
     }
 ?>

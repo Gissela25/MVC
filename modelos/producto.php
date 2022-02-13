@@ -3,7 +3,7 @@
 class Producto{
 
     private $pdo;
-
+    private $r;
     private $ID;
     private $Nombre;
     private $Marca;
@@ -160,23 +160,6 @@ class Producto{
             die($e->getMessage());
         }
     }
-    public function Obtener(){
-        try{
-            $consulta=$this->pdo->prepare("SELECT * FROM redes WHERE ID=?;");
-            $consulta->execute(array($ID));
-            $consulta->fetch(PDO::FETCH_OBJ);
-            $p=new Producto();
-            $p->setPro_id($r->pro_id);
-            $p->setPro_nom($r->pro_nom);
-            $p->setPro_marca($r->pro_marca);
-            $p->setPro_pre($r->pro_pre);
-            $p->setPro_can($r->pro_can);
-            return $p;
-
-        }catch(Exception $e){
-            die($e->getMessage());
-        }
-    }
 
     public function Eliminar($id){
         try{
@@ -201,6 +184,125 @@ class Producto{
             $consulta="DELETE FROM pc WHERE ID=?;";
             $this->pdo->prepare($consulta)
                  ->execute(array($id));
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+
+    public function Obtener($id){
+        try{
+            $consulta=$this->pdo->prepare("SELECT * FROM redes WHERE ID=?;");
+            $consulta->execute(array($id));
+            $r=$consulta->fetch(PDO::FETCH_OBJ);
+            $p=new Producto();
+            $p->setPro_id($r->ID);
+            $p->setPro_nom($r->Nombre);
+            $p->setPro_marca($r->Marca);
+            $p->setPro_pre($r->Precio);
+            $p->setPro_can($r->Cantidad);
+
+            return $p;
+
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+    public function Obtener2($id){
+        try{
+            $consulta=$this->pdo->prepare("SELECT * FROM laptops WHERE ID=?;");
+            $consulta->execute(array($id));
+            $r=$consulta->fetch(PDO::FETCH_OBJ);
+            $p=new Producto();
+            $p->setPro_id($r->ID);
+            $p->setPro_nom($r->Nombre);
+            $p->setPro_marca($r->Marca);
+            $p->setPro_pre($r->Precio);
+            $p->setPro_can($r->Cantidad);
+
+            return $p;
+
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+    public function Obtener3($id){
+        try{
+            $consulta=$this->pdo->prepare("SELECT * FROM pc WHERE ID=?;");
+            $consulta->execute(array($id));
+            $r=$consulta->fetch(PDO::FETCH_OBJ);
+            $p=new Producto();
+            $p->setPro_id($r->ID);
+            $p->setPro_nom($r->Nombre);
+            $p->setPro_marca($r->Marca);
+            $p->setPro_pre($r->Precio);
+            $p->setPro_can($r->Cantidad);
+
+            return $p;
+
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+
+    public function Actualizar(Producto $p){
+        try{
+          $consulta="UPDATE redes SET 
+          Nombre=?,
+          Marca=?,
+          Precio=?,
+          Cantidad=? 
+          WHERE ID=?; 
+          ";
+          $this->pdo->prepare($consulta)
+                ->execute(array(
+                    $p->getPro_nom(),
+                    $p->getPro_marca(),
+                    $p->getPro_pre(),
+                    $p->getPro_can(),
+                    $p->getPro_id()
+                ));
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+    public function Actualizar2(Producto $p){
+        try{
+          $consulta="UPDATE laptops SET 
+          Nombre=?,
+          Marca=?,
+          Precio=?,
+          Cantidad=? 
+          WHERE ID=?; 
+          ";
+          $this->pdo->prepare($consulta)
+                ->execute(array(
+                    $p->getPro_nom(),
+                    $p->getPro_marca(),
+                    $p->getPro_pre(),
+                    $p->getPro_can(),
+                    $p->getPro_id()
+                ));
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+    public function Actualizar3(Producto $p){
+        try{
+          $consulta="UPDATE pc SET 
+          Nombre=?,
+          Marca=?,
+          Precio=?,
+          Cantidad=? 
+          WHERE ID=?; 
+          ";
+          $this->pdo->prepare($consulta)
+                ->execute(array(
+                    $p->getPro_nom(),
+                    $p->getPro_marca(),
+                    $p->getPro_pre(),
+                    $p->getPro_can(),
+                    $p->getPro_id()
+                ));
         }catch(Exception $e){
             die($e->getMessage());
         }

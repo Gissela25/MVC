@@ -14,10 +14,25 @@
         }
         if(esUser($i_user)&&esAlphanumeric($i_pass))
         {
-            $modelo = new Usuario();
+            $modelo = new Entrada();
             $modelo->setUser($i_user);
             $modelo->setPass($i_pass);
-            $modelo->Into();     
+            $modelo->Into($i_user,$i_pass);     
+        }
+      
+    }
+    $errores_rec=array();
+    if(isset($_POST['confirmar']))
+    {
+        extract($_POST);
+        if(!isset($correo)||esVoid($correo))
+        {
+            array_push($errores_rec,"Debes ingresar una dirección de correo");
+        }
+        if(esMail($correo))
+        {
+            $modelo = new Entrada();
+            $modelo->Recuperando($correo);
         }
       
     }
