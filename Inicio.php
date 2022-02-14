@@ -29,10 +29,10 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.php">Inciar Sesion</a>
+                                <a class="nav-link active" aria-current="page" href="usuario/Ingresar">Inciar Sesion</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="?c=producto">Registrarse</a>
+                                <a class="nav-link"  href="usuario/Guardar">Registrarse</a>
                             </li>
                         </ul>
                     </div>
@@ -41,7 +41,7 @@
         </div>
     </div>
      <div class="d-grid gap-3 mt-3 mx-5">
-       <h1 align="center" style="color:#FFFFFF">Inovacion en tecnologia</h1>
+       <h1 align="center" style="color:#FFFFFF">Inovación en tecnológia</h1>
         <!-- <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
                 <div class="card text-white bg-dark mb-3">
@@ -88,9 +88,6 @@
                 </div>
                 <div class="carousel-item">
                     <img src="assets/images/pc.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/images/head.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"

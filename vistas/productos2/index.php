@@ -1,16 +1,16 @@
 <div class="row mx-5 mt-5">
     <div class="col ml-5">
         <div class="container-xxl"></div>
-        <h3 class="text-center">Accesorios de Laptops</h3>
+        <h3 class="text-center" style="color:#FFFFFF">Accesorios de Laptops</h3>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <a class="btn btn-primary btn-flat" href="?c=producto&a=FormCrear2">Insertar
+          <a class="btn btn-success btn-flat" href="FormCrear2">Insertar
             <i class="fa fa-lg fa-plus"></i></a>
         </div>
     </div>
 </div>
 <div class="row mx-5 mt-5">
     <div class="col ml-5">
-        <table class="table table-bordered ">
+        <table class="table table-bordered table-dark">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -30,9 +30,9 @@
                     <td>$<?=$r->Precio?></td>
                     <td><?=$r->Cantidad?></td>
                     <td>
-                        <a class="btn btn-info btn-flat" href="?c=producto&a=FormCrear&id=<?=$r->ID?>">Editar
+                        <a class="btn btn-light btn-flat" href="FormCrear2/<?=$r->ID?>">Editar
                             <i class="fa fa-lg fa-refresh"></i></a>
-                        <a class="btn btn-warning btn-flat" href="?c=producto&a=Borrar2&id=<?=$r->ID?>">Eliminar
+                        <a class="btn btn-secondary btn-flat" href="Borrar2/<?=$r->ID?>">Eliminar
                             <i class="fa fa-lg fa-trash"></i></a>
                     </td>
                     </td>

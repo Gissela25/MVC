@@ -1,3 +1,4 @@
+<?php require_once "config.php";?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,28 +12,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
-    <!-- <link rel="stylesheet" href="assets/css/principal.css"> -->
-</head>
+        <link rel="stylesheet" href="<?php echo SERVERURL;?>/assets/css/encabezado.css">
 
 <body>
     <nav class="navbar navbar-expand-lg navbar navbar-dark" style="background-color: #000000;">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"></a>
-            <img src="vistas/img/logo5.jpeg" alt="" width="140" height="70" class="d-inline-block align-text-top">
+            <img src="<?php echo SERVERURL;?>/vistas/img/logo5.jpeg" alt="" width="140" height="70" class="d-inline-block align-text-top">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.php">Incio</a>
+                        <a class="nav-link active" aria-current="page" href="<?php echo SERVERURL;?>producto/Indice">Incio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="?c=producto">Productos</a>
+                        <a class="nav-link" href="<?php echo SERVERURL;?>producto/Ver">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.php">Salir</a>
+                        <a class="nav-link" href="<?php echo SERVERURL;?>inicio">Salir</a>
                     </li>
                 </ul>
             </div>
