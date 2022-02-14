@@ -10,6 +10,6 @@ class InicioControlador{
     }
     public function Inicio(){
         //$bd = BasedeDatos::Conectar();
-        require_once "inicio.php";
+        require_once "Inicio.php";
     }
 }
