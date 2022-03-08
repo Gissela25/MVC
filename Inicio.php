@@ -32,7 +32,7 @@
                                 <a class="nav-link active" aria-current="page" href="usuario/Ingresar">Inciar Sesion</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link"  href="usuario/Guardar">Registrarse</a>
+                                <a class="nav-link"  href="usuario/Guardar">Registrarse_HOLA</a>
                             </li>
                         </ul>
                     </div>
